@@ -92,7 +92,8 @@ for index, classmate in enumerate(classmates):
 
 print(classmates)
 
-'''
+# this works
+# ---------------
 marvel_movies = ['Captain America: The First Avenger','Captain Marvel','Iron Man','Iron Man 2','The Incredible Hulk','Thor','Avengers','Iron Man 3','Thor: The Dark World','Captain America: The Winter Soldier','Guardians of the Galaxy','Guardians of the Galaxy Vol. 2','Avengers: Age of Ultron','Ant-Man','Captain America: Civil War','Spider-Man: Homecoming','Doctor Strange','Black Panther','Thor: Ragnarok','Ant-Man and The Wasp','Avengers Infinity War','Avengers: Endgame']
 movies_with_the = []
 for movie in marvel_movies:
@@ -102,3 +103,12 @@ for movie in marvel_movies:
         
 # print(marvel_movies)
 print(movies_with_the)
+# -----------------------
+'''
+# can use range to get the index 
+marvel_movies = ['Captain America: The First Avenger','Captain Marvel','Iron Man','Iron Man 2','The Incredible Hulk','Thor','Avengers','Iron Man 3','Thor: The Dark World','Captain America: The Winter Soldier','Guardians of the Galaxy','Guardians of the Galaxy Vol. 2','Avengers: Age of Ultron','Ant-Man','Captain America: Civil War','Spider-Man: Homecoming','Doctor Strange','Black Panther','Thor: Ragnarok','Ant-Man and The Wasp','Avengers Infinity War','Avengers: Endgame']
+movies_with_the = []
+
+# 0 is implied
+for index in range(len(marvel_movies)):
+    print(index," - ",marvel_movies[index])
