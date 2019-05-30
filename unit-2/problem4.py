@@ -1,9 +1,10 @@
+'''
 calculation = input("what calculation would you like to do (add, sub, mult, div)? ")
 num1 = int(input("what is number 1? "))
 num2 = int(input("what is number 2? "))
 result = 0 
 
-'''
+
 # works
 if calculation == "add":
     result = num1 + num2
@@ -19,7 +20,7 @@ else:
 
 print("result is =", result)
 # ----------------------------------
-'''
+
 
 def add(a,b):
     return a + b
@@ -45,3 +46,24 @@ elif calculation == "div":
 else:
     print("I did not understand your calculation choice!")
 
+'''
+
+# function with single argument
+def print_msg(message):
+    print(message)
+
+# print_msg('It is only Wednesday!')
+
+# functions that return a result
+def square(val):
+    return val * val
+
+#print(square(5))
+# -----------------------
+
+def square2(val):
+    result = val * val
+    return result
+
+answer = square2(10)
+print(answer)
