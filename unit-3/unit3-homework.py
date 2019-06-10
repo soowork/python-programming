@@ -16,10 +16,20 @@ def playlist():
             print(song['artist'])
 
     elif action == '3':
+        hours = 0 
+        mn = 0 
+        sec = 0 
+
         for song in songs:
             playlist_length += song['length']
         
+        hours = int( playlist_length / 60 )
+        mn = int(playlist_length % 60 )
+        sec = ( playlist_length - ( hours * 60) - mn ) * 60 
+
+
         print('Playlist is ', playlist_length, ' minutes long.')
+        print(f'Playlist is {hours} hours, {mn} minutes and {sec} seconds long.')
 
 playlist()
     

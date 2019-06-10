@@ -60,7 +60,8 @@ play_pig()
 
 # this is refactor - we didn't get it quite working yet 
 player_scores = [0,0]
-turn = random.randint(0,1)
+# we store the turn so that we can pass by reference
+turn_var = [random.randint(0,1)]
 def roll(turn):
     choice = input(f'[PLAYER {turn+1}] Roll (r) or Hold (h): ')
     if choice == 'r':
@@ -68,18 +69,18 @@ def roll(turn):
         # if player rolls 1, score goes to 0 and turn goes to next player
         if turn_score == 1:
             player_scores[turn] = 0 
-            turn = abs(turn-1)
+            turn_var[0] = abs(turn_var[0]-1)
         else:
             player_scores[turn] += turn_score
-        print(f"roll is {turn_score}, and total is {player_scores[turn]}")
+        print(f"roll is {turn_score}, and total is {player_scores[turn_var[0]]}")
     else:
         # player has chosen to hold
         # score is unchanged - turn changes
-        turn = abs(turn-1)
+        turn_var[0] = abs(turn_var[0]-1)
 
 
 while(True):
-    roll(turn)
+    roll(turn_var[0])
     if player_scores[0] >= 20 or player_scores[1] >= 20:
         break
 
