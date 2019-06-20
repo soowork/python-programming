@@ -1,0 +1,31 @@
+{
+    "day_name":"Monday",
+    "breakfast":{
+        "menu":[
+            {
+            "item": "Eggs",
+            "price": 0.5,
+            "calories": 150 
+            },
+            {
+            "item": "Bacon",
+            "price": 1,
+            "calories": 200 
+            }    
+        ]
+    },
+    "lunch":{
+        "menu":[
+            {
+            "item": "pasta",
+            "price": 5.5,
+            "calories": 350 
+            },
+            {
+            "item": "chicken",
+            "price": 2.5,
+            "calories": 200 
+            }    
+        ]
+    }
+}
